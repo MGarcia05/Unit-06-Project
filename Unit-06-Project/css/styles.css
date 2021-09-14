@@ -1,3 +1,28 @@
+/* transformation styling */
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
 
@@ -92,9 +117,13 @@ button {
   width: 15px;
 }
 
+/* added transition, transform properties */ 
+
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: transform .75s cubic-bezier(0, -25, 0, 50);
+  transform: scale(1.1);
 }
 
 /* Keyboard */
